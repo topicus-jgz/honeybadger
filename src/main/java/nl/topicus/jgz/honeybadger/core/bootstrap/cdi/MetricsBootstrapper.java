@@ -2,26 +2,31 @@ package nl.topicus.jgz.honeybadger.core.bootstrap.cdi;
 
 import com.codahale.metrics.JvmAttributeGaugeSet;
 import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.jvm.ThreadStatesGaugeSet;
+import javax.ejb.Startup;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 
-import nl.topicus.jgz.honeybadger.core.bootstrap.cdi.CDIBootstrap;
-
 /**
+ * Producer for {@link MetricRegistry}. Sets some defaults gauges
+ * <p>
  * Created by Thijs Smeenk on 10-8-15.
  */
-public class MetricsBootstrapper implements CDIBootstrap {
+@Startup
+@ApplicationScoped
+public class MetricsBootstrapper implements CDIBootstrap<MetricRegistry> {
 
 	@Produces
 	@ApplicationScoped
-	private MetricRegistry metricRegistry() {
-		MetricRegistry metricRegistry = new MetricRegistry();
-		bootstrap(metricRegistry);
+	public MetricRegistry produce() {
+		MetricRegistry registry = new MetricRegistry();
+		bootstrap(registry);
 
-		return metricRegistry;
+		return registry;
 	}
 
 	public void bootstrap(MetricRegistry metricRegistry) {
 		metricRegistry.register("jvm.attribute", new JvmAttributeGaugeSet());
+		metricRegistry.register("jvm.threads", new ThreadStatesGaugeSet());
 	}
 }
