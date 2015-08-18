@@ -1,10 +1,13 @@
 package nl.topicus.jgz.honeybadger.core.jaxrs;
 
 import com.codahale.metrics.annotation.Metered;
-import javax.annotation.PostConstruct;
+import java.net.URI;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import nl.topicus.jgz.honeybadger.core.assertion.Assertions;
 
 /**
  * Represents a Rest-Resource
@@ -16,8 +19,5 @@ import javax.ws.rs.core.MediaType;
 @Consumes(MediaType.APPLICATION_JSON)
 public abstract class Resource {
 
-	@PostConstruct
-	public void printCreation() {
-		System.err.println("Created: " + this.getClass().getName());
-	}
+
 }

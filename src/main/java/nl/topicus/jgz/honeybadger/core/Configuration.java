@@ -1,7 +1,8 @@
 package nl.topicus.jgz.honeybadger.core;
 
+import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.wildfly.swarm.container.Container;
-import org.wildfly.swarm.jaxrs.JAXRSDeployment;
+import org.wildfly.swarm.jaxrs.JAXRSArchive;
 
 /**
  * Created by Thijs Smeenk on 7-8-15.
@@ -9,22 +10,22 @@ import org.wildfly.swarm.jaxrs.JAXRSDeployment;
 public class Configuration {
 
 	private final Container container;
-	private final JAXRSDeployment jaxrsDeployment;
+	private final JAXRSArchive jaxrsArchive;
 
 	protected Configuration() throws Exception {
 		this.container = new Container();
-		this.jaxrsDeployment = new JAXRSDeployment(this.container);
+		this.jaxrsArchive = ShrinkWrap.create(JAXRSArchive.class);
 	}
 
 	public Container getContainer() {
 		return container;
 	}
 
-	public JAXRSDeployment getJaxrsDeployment() {
-		return jaxrsDeployment;
+	public JAXRSArchive getJaxrsArchive() {
+		return jaxrsArchive;
 	}
 
 	public void deployJaxRS() throws Exception {
-		this.container.deploy(jaxrsDeployment);
+		this.container.deploy(jaxrsArchive);
 	}
 }
