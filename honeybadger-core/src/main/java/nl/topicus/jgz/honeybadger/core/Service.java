@@ -1,7 +1,9 @@
 package nl.topicus.jgz.honeybadger.core;
 
-import nl.topicus.jgz.honeybadger.core.bootstrap.CDIBootstrapper;
-import nl.topicus.jgz.honeybadger.core.bootstrap.LogStashBootstrapper;
+import java.util.ArrayList;
+import java.util.List;
+
+import nl.topicus.jgz.honeybadger.core.bootstrap.PreDeploymentBootstrap;
 import nl.topicus.jgz.honeybadger.core.jaxrs.Resource;
 
 /**
@@ -24,8 +26,7 @@ public abstract class Service {
 		configuration = new Configuration();
 
 		//bootstraps that do not rely on CDI or the container being started
-		new CDIBootstrapper().bootstrap(configuration);
-		new LogStashBootstrapper().bootstrap(configuration);
+		bootstraps().forEach(bootstrap -> bootstrap.bootstrap(configuration));
 
 		//Doing the bootstrap on the container
 		configuration.getContainer().start();
@@ -38,6 +39,10 @@ public abstract class Service {
 		configuration.deployJaxRS();
 	}
 
+	protected List<PreDeploymentBootstrap> bootstraps() {
+		return new ArrayList<>();
+	}
+
 	public abstract void setup();
 
 	protected void registerResource(Class<? extends Resource> resourceClass) {
@@ -48,6 +53,11 @@ public abstract class Service {
 	protected void addClass(Class<?> classToAdd) {
 		assertBootstrapped();
 		configuration.getJaxrsArchive().addClass(classToAdd);
+	}
+
+	protected void addPackage(String pack) {
+		assertBootstrapped();
+		configuration.getJaxrsArchive().addPackage(pack);
 	}
 
 	private void assertBootstrapped() {
