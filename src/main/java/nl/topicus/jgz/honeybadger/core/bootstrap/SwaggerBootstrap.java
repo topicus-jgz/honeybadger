@@ -12,8 +12,8 @@ import nl.topicus.jgz.honeybadger.core.Configuration;
 public class SwaggerBootstrap implements PreDeploymentBootstrap {
 
 	public void bootstrap(Configuration configuration) {
-		configuration.getJaxrsDeployment().addResource(ApiListingResource.class);
-		configuration.getJaxrsDeployment().addResource(SwaggerSerializers.class);
+		configuration.getJaxrsArchive().addResource(SwaggerSerializers.class);
+		configuration.getJaxrsArchive().addResource(ApiListingResource.class);
 
 		BeanConfig beanConfig = new BeanConfig();
 		beanConfig.setVersion("1.0.0");

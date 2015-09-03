@@ -9,3 +9,4 @@ public interface PreDeploymentBootstrap {
 
 	void bootstrap(Configuration configuration);
 }
+
