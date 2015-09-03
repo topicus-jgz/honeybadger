@@ -1,10 +1,11 @@
-package nl.topicus.jgz.honeybadger.core.bootstrap;
+package nl.topicus.jgz.honeybadger.swagger.bootstrap;
 
 import io.swagger.jaxrs.config.BeanConfig;
 import io.swagger.jaxrs.listing.ApiListingResource;
 import io.swagger.jaxrs.listing.SwaggerSerializers;
 
 import nl.topicus.jgz.honeybadger.core.Configuration;
+import nl.topicus.jgz.honeybadger.core.bootstrap.PreDeploymentBootstrap;
 
 /**
  * Created by rickt on 18-Aug-15.
