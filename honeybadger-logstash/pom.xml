@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>nl.topicus.jgz</groupId>
+        <artifactId>honeybadger-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>nl.topicus.jgz</groupId>
+    <artifactId>honeybadger-logstash</artifactId>
+    <version>0.1-SNAPSHOT</version>
+
+    <properties>
+        <version.wildfly-swarm>1.0.0.Alpha4</version.wildfly-swarm>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>nl.topicus.jgz</groupId>
+            <artifactId>honeybadger-core</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-logstash</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+    </dependencies>
+
+</project>

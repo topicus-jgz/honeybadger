@@ -1,4 +1,4 @@
-package nl.topicus.jgz.honeybadger.core.bootstrap.cdi;
+package nl.topicus.jgz.honeybadger.metrics.bootstrap;
 
 import com.codahale.metrics.JvmAttributeGaugeSet;
 import com.codahale.metrics.MetricRegistry;
@@ -6,6 +6,8 @@ import com.codahale.metrics.jvm.ThreadStatesGaugeSet;
 import javax.ejb.Startup;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
+
+import nl.topicus.jgz.honeybadger.core.bootstrap.cdi.CDIBootstrap;
 
 /**
  * Producer for {@link MetricRegistry}. Sets some defaults gauges
