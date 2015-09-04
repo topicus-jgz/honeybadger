@@ -1,4 +1,4 @@
-package nl.topicus.jgz.honeybadger.core.metrics;
+package nl.topicus.jgz.honeybadger.metrics;
 
 import com.codahale.metrics.MetricRegistry;
 import javax.inject.Inject;

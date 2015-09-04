@@ -12,11 +12,6 @@
 
     <groupId>nl.topicus.jgz</groupId>
     <artifactId>honeybadger-logstash</artifactId>
-    <version>0.1-SNAPSHOT</version>
-
-    <properties>
-        <version.wildfly-swarm>1.0.0.Alpha4</version.wildfly-swarm>
-    </properties>
 
     <dependencies>
         <dependency>

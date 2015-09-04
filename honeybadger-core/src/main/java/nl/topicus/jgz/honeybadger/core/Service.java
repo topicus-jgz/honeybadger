@@ -63,7 +63,7 @@ public abstract class Service {
 	private void assertBootstrapped() {
 		if (configuration == null) {
 			throw new IllegalStateException(
-			 "Attempt to use the Configuration but the Configuration was NULL. Was the service bootstrapped?");
+			 "Attempt to use the Configuration but the Configuration was NULL. Was the service bootstrapped before calling this method?");
 		}
 	}
 }

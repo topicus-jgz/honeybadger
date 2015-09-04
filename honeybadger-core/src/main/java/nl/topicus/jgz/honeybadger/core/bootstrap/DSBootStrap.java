@@ -10,6 +10,8 @@ import org.wildfly.swarm.jpa.JPAFraction;
 import nl.topicus.jgz.honeybadger.core.Configuration;
 
 /**
+ * //todo move to examples this it's just an example of bootstrapping datasources in an akward way
+ * <p>
  * Created by Thijs Smeenk on 21-8-15.
  */
 public class DSBootStrap implements PreDeploymentBootstrap {

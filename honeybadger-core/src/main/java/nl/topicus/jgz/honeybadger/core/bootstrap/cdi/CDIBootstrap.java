@@ -5,7 +5,5 @@ package nl.topicus.jgz.honeybadger.core.bootstrap.cdi;
  */
 public interface CDIBootstrap<T> {
 
-	T produce();
-
 	void bootstrap(T target);
 }
