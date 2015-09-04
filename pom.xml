@@ -14,11 +14,12 @@
         <module>honeybadger-core</module>
         <module>honeybadger-metrics</module>
         <module>honeybadger-logstash</module>
+        <module>honeybadger-configuration</module>
     </modules>
 
 
     <properties>
-        <version.wildfly-swarm>1.0.0.Alpha4</version.wildfly-swarm>
+        <version.wildfly-swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly-swarm>
         <version.slf4j>1.7.12</version.slf4j>
         <version.dropwizard-metrics>3.1.2</version.dropwizard-metrics>
         <version.metrics-cdi>1.2.0</version.metrics-cdi>
