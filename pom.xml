@@ -8,15 +8,15 @@
     <artifactId>honeybadger-parent</artifactId>
     <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
-    <name>HoneyBadger Parent Project</name>
+    <name>honeybadger-parent</name>
 
     <modules>
         <module>honeybadger-core</module>
         <module>honeybadger-metrics</module>
         <module>honeybadger-logstash</module>
         <module>honeybadger-configuration</module>
+        <module>honeybadger-bootstrap</module>
     </modules>
-
 
     <properties>
         <version.wildfly-swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly-swarm>

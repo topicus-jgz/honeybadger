@@ -3,7 +3,8 @@ package nl.topicus.jgz.honeybadger.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.topicus.jgz.honeybadger.core.bootstrap.PreDeploymentBootstrap;
+import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
+import nl.topicus.jgz.honeybadger.configuration.Configuration;
 import nl.topicus.jgz.honeybadger.core.jaxrs.Resource;
 
 /**

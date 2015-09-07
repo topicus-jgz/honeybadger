@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>nl.topicus.jgz</groupId>
-            <artifactId>honeybadger-core</artifactId>
+            <artifactId>honeybadger-bootstrap</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

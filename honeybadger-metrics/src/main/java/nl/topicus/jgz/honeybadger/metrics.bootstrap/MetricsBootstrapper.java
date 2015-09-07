@@ -11,7 +11,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import org.elasticsearch.metrics.ElasticsearchReporter;
 
-import nl.topicus.jgz.honeybadger.core.bootstrap.cdi.CDIBootstrap;
+import nl.topicus.jgz.honeybadger.bootstrap.cdi.CDIBootstrap;
 
 /**
  * Producer for {@link MetricRegistry}. Sets some defaults gauges
