@@ -20,6 +20,11 @@
             <version>0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>nl.topicus.jgz</groupId>
+            <artifactId>honeybadger-configuration</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>wildfly-swarm-logstash</artifactId>
             <version>${version.wildfly-swarm}</version>

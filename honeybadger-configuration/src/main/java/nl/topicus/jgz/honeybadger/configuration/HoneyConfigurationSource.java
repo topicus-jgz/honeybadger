@@ -22,7 +22,11 @@ import nl.topicus.jgz.honeybadger.configuration.model.Property;
 public class HoneyConfigurationSource implements PolledConfigurationSource {
 
 	//Enviroment specifc
-	private static final String honeyUrl = System.getProperty("honeyurl");
+	private final String honeyUrl;
+
+	public HoneyConfigurationSource(String honeyurl) {
+		this.honeyUrl = honeyurl;
+	}
 
 	@Override
 	public PollResult poll(boolean b, Object o) throws Exception {

@@ -5,6 +5,7 @@ import java.util.List;
 
 import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
 import nl.topicus.jgz.honeybadger.configuration.Configuration;
+import nl.topicus.jgz.honeybadger.configuration.ConfigurationBootstrap;
 import nl.topicus.jgz.honeybadger.core.jaxrs.Resource;
 
 /**
@@ -25,6 +26,9 @@ public abstract class Service {
 	 */
 	public void boostrap() throws Exception {
 		configuration = new Configuration();
+
+		//Configuration has to be bootstrapped first
+		new ConfigurationBootstrap(System.getProperty("honey.url")).bootstrap(configuration);
 
 		//bootstraps that do not rely on CDI or the container being started
 		bootstraps().forEach(bootstrap -> bootstrap.bootstrap(configuration));

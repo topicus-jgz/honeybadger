@@ -20,7 +20,8 @@
         <!-- honeybadger based dependencies -->
         <dependency>
             <groupId>nl.topicus.jgz</groupId>
-            <artifactId>honeybadger-bootstrap</artifactId>
+            <artifactId>honeybadger-configuration</artifactId>
+            <version>0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
