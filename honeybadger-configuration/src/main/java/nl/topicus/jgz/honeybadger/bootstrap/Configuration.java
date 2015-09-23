@@ -1,4 +1,4 @@
-package bootstrap;
+package nl.topicus.jgz.honeybadger.bootstrap;
 
 import java.util.ArrayList;
 import java.util.List;

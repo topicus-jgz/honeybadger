@@ -16,12 +16,6 @@
     <dependencies>
 
         <dependency>
-            <groupId>nl.topicus.jgz</groupId>
-            <artifactId>honeybadger-bootstrap</artifactId>
-            <version>0.1-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.netflix.archaius</groupId>
             <artifactId>archaius-core</artifactId>
             <version>0.6.0</version>
@@ -38,10 +32,24 @@
             <version>3.0.12.Final</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
-            <artifactId>wildfly-swarm-logstash</artifactId>
+            <artifactId>wildfly-swarm-jaxrs-weld</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-jpa</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-ejb</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-hibernate-validator</artifactId>
             <version>${version.wildfly-swarm}</version>
         </dependency>
     </dependencies>

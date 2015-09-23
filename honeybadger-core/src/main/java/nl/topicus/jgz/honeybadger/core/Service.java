@@ -3,9 +3,9 @@ package nl.topicus.jgz.honeybadger.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import bootstrap.PreDeploymentBootstrap;
-import bootstrap.Configuration;
-import configuration.ConfigurationBootstrap;
+import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
+import nl.topicus.jgz.honeybadger.bootstrap.Configuration;
+import nl.topicus.jgz.honeybadger.configuration.ConfigurationBootstrap;
 import nl.topicus.jgz.honeybadger.core.jaxrs.Resource;
 
 /**
@@ -22,7 +22,7 @@ public abstract class Service {
 	}
 
 	/**
-	 * Call this method to bootstrap the service. Preferably from a psvm (public static void main)
+	 * Call this method to nl.topicus.jgz.honeybadger.bootstrap the service. Preferably from a psvm (public static void main)
 	 */
 	public void boostrap() throws Exception {
 		configuration = new Configuration();
@@ -33,7 +33,7 @@ public abstract class Service {
 		//bootstraps that do not rely on CDI or the container being started
 		bootstraps().forEach(bootstrap -> bootstrap.bootstrap(configuration));
 
-		//Doing the bootstrap on the container
+		//Doing the nl.topicus.jgz.honeybadger.bootstrap on the container
 		configuration.getContainer().start();
 
 		//User setup of the container (adding classes etc)

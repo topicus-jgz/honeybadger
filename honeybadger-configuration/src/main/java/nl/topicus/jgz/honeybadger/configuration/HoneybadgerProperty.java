@@ -1,4 +1,4 @@
-package configuration;
+package nl.topicus.jgz.honeybadger.configuration;
 
 import com.netflix.config.DynamicPropertyFactory;
 

@@ -1,4 +1,4 @@
-package bootstrap;
+package nl.topicus.jgz.honeybadger.bootstrap;
 
 import org.jboss.shrinkwrap.api.asset.StringAsset;
 

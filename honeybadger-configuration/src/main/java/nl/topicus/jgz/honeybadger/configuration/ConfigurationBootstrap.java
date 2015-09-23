@@ -1,11 +1,11 @@
-package configuration;
+package nl.topicus.jgz.honeybadger.configuration;
 
 import com.netflix.config.ConfigurationManager;
 import com.netflix.config.DynamicConfiguration;
 import com.netflix.config.FixedDelayPollingScheduler;
 
-import bootstrap.Configuration;
-import bootstrap.PreDeploymentBootstrap;
+import nl.topicus.jgz.honeybadger.bootstrap.Configuration;
+import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
 
 /**
  * Created by Thijs Smeenk on 7-9-15.
