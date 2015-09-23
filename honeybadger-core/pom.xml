@@ -44,7 +44,7 @@
             <artifactId>wildfly-swarm-hibernate-validator</artifactId>
             <version>${version.wildfly-swarm}</version>
         </dependency>
-        
+
     </dependencies>
 
     <build>

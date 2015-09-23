@@ -1,9 +1,7 @@
-package nl.topicus.jgz.honeybadger.bootstrap;
+package bootstrap;
 
+import configuration.HoneybadgerProperty;
 import org.wildfly.swarm.logstash.LogstashFraction;
-
-import nl.topicus.jgz.honeybadger.configuration.Configuration;
-import nl.topicus.jgz.honeybadger.configuration.HoneybadgerProperty;
 
 /**
  * Created by Thijs Smeenk on 17-8-15.

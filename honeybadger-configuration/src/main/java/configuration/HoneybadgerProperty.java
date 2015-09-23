@@ -1,4 +1,4 @@
-package nl.topicus.jgz.honeybadger.configuration;
+package configuration;
 
 import com.netflix.config.DynamicPropertyFactory;
 
@@ -7,13 +7,13 @@ import com.netflix.config.DynamicPropertyFactory;
  */
 public class HoneybadgerProperty {
 
-	private static final String EMPTY_STRING = "";
+	private static final String DEFAULT_EMPTY_VALUE = "";
 
 	public static String get(String property) {
 
-		String determinedProperty = DynamicPropertyFactory.getInstance().getStringProperty(property, "").getValue();
+		String determinedProperty = DynamicPropertyFactory.getInstance().getStringProperty(property, DEFAULT_EMPTY_VALUE).getValue();
 
-		if (determinedProperty.equals(EMPTY_STRING)) {
+		if (determinedProperty.equals(DEFAULT_EMPTY_VALUE)) {
 			throw new IllegalStateException("Could not locate property: " + property);
 		}
 

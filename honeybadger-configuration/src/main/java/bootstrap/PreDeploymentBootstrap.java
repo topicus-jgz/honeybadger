@@ -1,6 +1,5 @@
-package nl.topicus.jgz.honeybadger.bootstrap;
+package bootstrap;
 
-import nl.topicus.jgz.honeybadger.configuration.Configuration;
 
 /**
  * Created by Thijs Smeenk on 10-8-15.

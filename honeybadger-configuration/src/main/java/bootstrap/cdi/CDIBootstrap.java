@@ -1,4 +1,4 @@
-package nl.topicus.jgz.honeybadger.bootstrap.cdi;
+package bootstrap.cdi;
 
 /**
  * Created by Thijs Smeenk on 17-8-15.

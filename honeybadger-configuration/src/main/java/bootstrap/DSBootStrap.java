@@ -1,4 +1,4 @@
-package nl.topicus.jgz.honeybadger.bootstrap;
+package bootstrap;
 
 import org.jboss.shrinkwrap.api.asset.ClassLoaderAsset;
 import org.wildfly.swarm.container.Container;
@@ -7,7 +7,7 @@ import org.wildfly.swarm.datasources.DatasourcesFraction;
 import org.wildfly.swarm.datasources.Driver;
 import org.wildfly.swarm.jpa.JPAFraction;
 
-import nl.topicus.jgz.honeybadger.configuration.Configuration;
+
 
 /**
  * //todo move to examples this it's just an example of bootstrapping datasources in an akward way

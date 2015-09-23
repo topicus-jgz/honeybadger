@@ -1,12 +1,10 @@
-package nl.topicus.jgz.honeybadger.configuration;
+package bootstrap;
 
 import java.util.ArrayList;
 import java.util.List;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.wildfly.swarm.container.Container;
 import org.wildfly.swarm.jaxrs.JAXRSArchive;
-
-import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
 
 /**
  * Created by Thijs Smeenk on 7-8-15.

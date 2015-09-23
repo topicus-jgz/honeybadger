@@ -1,4 +1,4 @@
-package nl.topicus.jgz.honeybadger.configuration.model;
+package configuration.model;
 
 /**
  * Created by Thijs Smeenk on 7-9-15.

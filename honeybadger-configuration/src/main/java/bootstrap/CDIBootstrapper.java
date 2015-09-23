@@ -1,8 +1,6 @@
-package nl.topicus.jgz.honeybadger.bootstrap;
+package bootstrap;
 
 import org.jboss.shrinkwrap.api.asset.StringAsset;
-
-import nl.topicus.jgz.honeybadger.configuration.Configuration;
 
 /**
  * //todo move to examples

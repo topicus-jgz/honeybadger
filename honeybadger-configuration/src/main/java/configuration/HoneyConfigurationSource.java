@@ -1,7 +1,8 @@
-package nl.topicus.jgz.honeybadger.configuration;
+package configuration;
 
 import com.netflix.config.PollResult;
 import com.netflix.config.PolledConfigurationSource;
+import configuration.model.Property;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -11,11 +12,9 @@ import javax.ws.rs.core.Response;
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 
-import nl.topicus.jgz.honeybadger.configuration.model.Property;
-
 /**
  * {@link PolledConfigurationSource} that contacts Honey and loads the latest set of properties so they can be loaded into the configuration
- * contaxt.
+ * context.
  * <p>
  * Created by Thijs Smeenk on 7-9-15.
  */
