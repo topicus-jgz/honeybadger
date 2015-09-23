@@ -44,19 +44,7 @@
             <artifactId>wildfly-swarm-hibernate-validator</artifactId>
             <version>${version.wildfly-swarm}</version>
         </dependency>
-
-
-        <!-- Bean validation -->
-        <dependency>
-            <groupId>io.dropwizard.metrics</groupId>
-            <artifactId>metrics-jvm</artifactId>
-            <version>${version.dropwizard-metrics}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.astefanutti.metrics.cdi</groupId>
-            <artifactId>metrics-cdi</artifactId>
-            <version>${version.metrics-cdi}</version>
-        </dependency>
+        
     </dependencies>
 
     <build>
