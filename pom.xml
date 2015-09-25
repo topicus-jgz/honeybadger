@@ -11,12 +11,12 @@
     <name>honeybadger-parent</name>
 
     <modules>
+        <module>honeybadger-configuration</module>
         <module>honeybadger-core</module>
         <module>honeybadger-metrics</module>
         <module>honeybadger-logstash</module>
         <module>honeybadger-swagger</module>
         <module>honeybadger-example</module>
-        <module>honeybadger-configuration</module>
     </modules>
 
     <properties>

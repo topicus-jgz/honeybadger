@@ -6,8 +6,6 @@ import java.util.List;
 import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
 import nl.topicus.jgz.honeybadger.bootstrap.Configuration;
 import nl.topicus.jgz.honeybadger.configuration.ConfigurationBootstrap;
-import nl.topicus.jgz.honeybadger.core.bootstrap.PostDeploymentBootstrap;
-import nl.topicus.jgz.honeybadger.core.bootstrap.PreDeploymentBootstrap;
 import nl.topicus.jgz.honeybadger.core.jaxrs.Resource;
 
 /**
@@ -44,15 +42,9 @@ public abstract class Service {
 		//Deploying the container
 		configuration.getJaxrsArchive().addAllDependencies();
 		configuration.deployJaxRS();
-
-		postDeploymentBootstraps().forEach(bootstrap -> bootstrap.postDeploymenBootstrap(configuration));
 	}
 
 	protected List<PreDeploymentBootstrap> bootstraps() {
-		return new ArrayList<>();
-	}
-
-	protected List<PostDeploymentBootstrap> postDeploymentBootstraps() {
 		return new ArrayList<>();
 	}
 
