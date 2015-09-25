@@ -1,10 +1,10 @@
-package nl.topicus.jgz.honeybadger.core.bootstrap;
+package nl.topicus.jgz.honeybadger.bootstrap;
 
 import org.jboss.shrinkwrap.api.asset.StringAsset;
 
-import nl.topicus.jgz.honeybadger.core.Configuration;
-
 /**
+ * //todo move to examples
+ * <p>
  * Created by Thijs Smeenk on 14-8-15.
  */
 public class CDIBootstrapper implements PreDeploymentBootstrap {

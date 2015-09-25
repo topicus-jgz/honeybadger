@@ -3,6 +3,10 @@ package nl.topicus.jgz.honeybadger.core;
 import java.util.ArrayList;
 import java.util.List;
 
+import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
+import nl.topicus.jgz.honeybadger.bootstrap.Configuration;
+import nl.topicus.jgz.honeybadger.configuration.ConfigurationBootstrap;
+import nl.topicus.jgz.honeybadger.core.bootstrap.PostDeploymentBootstrap;
 import nl.topicus.jgz.honeybadger.core.bootstrap.PreDeploymentBootstrap;
 import nl.topicus.jgz.honeybadger.core.jaxrs.Resource;
 
@@ -15,35 +19,23 @@ public abstract class Service {
 
 	private Configuration configuration;
 
-	public static void main(String[] args) {
-		try {
-			Service service = new Service() {
-
-				@Override
-				public void setup() {
-
-				}
-			};
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	protected Service() throws Exception {
 		this.boostrap();
 	}
 
 	/**
-	 * Call this method to bootstrap the service. Preferably from a psvm (public static void main)
+	 * Call this method to nl.topicus.jgz.honeybadger.bootstrap the service. Preferably from a psvm (public static void main)
 	 */
 	public void boostrap() throws Exception {
 		configuration = new Configuration();
 
+		//Configuration has to be bootstrapped first
+		new ConfigurationBootstrap(System.getProperty("honey.url")).bootstrap(configuration);
+
 		//bootstraps that do not rely on CDI or the container being started
 		bootstraps().forEach(bootstrap -> bootstrap.bootstrap(configuration));
 
-		//Doing the bootstrap on the container
+		//Doing the nl.topicus.jgz.honeybadger.bootstrap on the container
 		configuration.getContainer().start();
 
 		//User setup of the container (adding classes etc)
@@ -52,9 +44,15 @@ public abstract class Service {
 		//Deploying the container
 		configuration.getJaxrsArchive().addAllDependencies();
 		configuration.deployJaxRS();
+
+		postDeploymentBootstraps().forEach(bootstrap -> bootstrap.postDeploymenBootstrap(configuration));
 	}
 
 	protected List<PreDeploymentBootstrap> bootstraps() {
+		return new ArrayList<>();
+	}
+
+	protected List<PostDeploymentBootstrap> postDeploymentBootstraps() {
 		return new ArrayList<>();
 	}
 
@@ -78,7 +76,7 @@ public abstract class Service {
 	private void assertBootstrapped() {
 		if (configuration == null) {
 			throw new IllegalStateException(
-			 "Attempt to use the Configuration but the Configuration was NULL. Was the service bootstrapped?");
+			 "Attempt to use the Configuration but the Configuration was NULL. Was the service bootstrapped before calling this method?");
 		}
 	}
 }

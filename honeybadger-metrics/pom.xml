@@ -14,13 +14,13 @@
     <version>0.1-SNAPSHOT</version>
 
     <properties>
-        <version.wildfly-swarm>1.0.0.Alpha4</version.wildfly-swarm>
+        <version.wildfly-swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly-swarm>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>nl.topicus.jgz</groupId>
-            <artifactId>honeybadger-core</artifactId>
+            <artifactId>honeybadger-configuration</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -36,6 +36,16 @@
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-jvm</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>metrics-elasticsearch-reporter</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-healthchecks</artifactId>
             <version>3.1.2</version>
         </dependency>
     </dependencies>

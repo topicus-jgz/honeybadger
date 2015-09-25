@@ -8,14 +8,31 @@
     <artifactId>honeybadger-parent</artifactId>
     <packaging>pom</packaging>
     <version>0.1-SNAPSHOT</version>
-    <name>HoneyBadger Parent Project</name>
+    <name>honeybadger-parent</name>
 
     <modules>
         <module>honeybadger-core</module>
         <module>honeybadger-metrics</module>
         <module>honeybadger-logstash</module>
         <module>honeybadger-swagger</module>
+        <module>honeybadger-example</module>
+        <module>honeybadger-configuration</module>
     </modules>
+
+    <properties>
+        <version.wildfly-swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly-swarm>
+        <version.slf4j>1.7.12</version.slf4j>
+        <version.dropwizard-metrics>3.1.2</version.dropwizard-metrics>
+        <version.metrics-cdi>1.2.0</version.metrics-cdi>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${version.slf4j}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement>
