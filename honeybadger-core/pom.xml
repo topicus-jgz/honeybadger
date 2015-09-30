@@ -6,12 +6,12 @@
 
 
     <parent>
-        <groupId>nl.topicus.jgz</groupId>
+        <groupId>org.honeybadger</groupId>
         <artifactId>honeybadger-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>nl.topicus.jgz</groupId>
+    <groupId>org.honeybadger</groupId>
     <artifactId>honeybadger-core</artifactId>
     <version>0.1-SNAPSHOT</version>
 
@@ -19,7 +19,7 @@
 
         <!-- honeybadger based dependencies -->
         <dependency>
-            <groupId>nl.topicus.jgz</groupId>
+            <groupId>org.honeybadger</groupId>
             <artifactId>honeybadger-configuration</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>

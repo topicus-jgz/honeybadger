@@ -22,7 +22,7 @@ public abstract class Service {
 	}
 
 	/**
-	 * Call this method to nl.topicus.jgz.honeybadger.bootstrap the service. Preferably from a psvm (public static void main)
+	 * Call this method to org.honeybadger.honeybadger.bootstrap the service. Preferably from a psvm (public static void main)
 	 */
 	public void boostrap() throws Exception {
 		configuration = new Configuration();
@@ -33,7 +33,7 @@ public abstract class Service {
 		//bootstraps that do not rely on CDI or the container being started
 		bootstraps().forEach(bootstrap -> bootstrap.bootstrap(configuration));
 
-		//Doing the nl.topicus.jgz.honeybadger.bootstrap on the container
+		//Doing the org.honeybadger.honeybadger.bootstrap on the container
 		configuration.getContainer().start();
 
 		//User setup of the container (adding classes etc)
