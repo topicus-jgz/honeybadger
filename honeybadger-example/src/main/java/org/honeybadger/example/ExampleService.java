@@ -3,10 +3,9 @@ package org.honeybadger.example;
 import com.google.common.collect.Lists;
 import java.util.List;
 
-import nl.topicus.jgz.honeybadger.bootstrap.PreDeploymentBootstrap;
-import nl.topicus.jgz.honeybadger.core.Service;
-import nl.topicus.jgz.honeybadger.core.jaxrs.Resource;
-import nl.topicus.jgz.honeybadger.swagger.bootstrap.SwaggerBootstrap;
+import org.honeybadger.bootstrap.PreDeploymentBootstrap;
+import org.honeybadger.core.Service;
+//import orghoneybadger.swagger.bootstrap.SwaggerBootstrap;
 
 /**
  * Created by rickt on 03-Sep-15.
@@ -27,10 +26,11 @@ public class ExampleService extends Service {
 
 	@Override
 	protected List<PreDeploymentBootstrap> bootstraps() {
-		return Lists.newArrayList(new SwaggerBootstrap());
+		return Lists.newArrayList();
 	}
 
 	@Override
 	public void setup() {
+		//registerResource(ExampleResource.class);
 	}
 }

@@ -23,8 +23,11 @@ public class HoneyConfigurationSource implements PolledConfigurationSource {
 	//Enviroment specifc
 	private final String honeyUrl;
 
+	private ResteasyClient client;
+
 	public HoneyConfigurationSource(String honeyurl) {
 		this.honeyUrl = honeyurl;
+		this.client = new ResteasyClientBuilder().build();
 	}
 
 	@Override
@@ -43,9 +46,7 @@ public class HoneyConfigurationSource implements PolledConfigurationSource {
 	}
 
 	private Response callHoney() {
-		ResteasyClient client = new ResteasyClientBuilder().build();
 		Response response = client.target(honeyUrl).request().get();
-
 		if (response.getStatus() != 200) {
 			throw new IllegalStateException("Cannot plug into Honey. Get operation failed! Tried url: " + honeyUrl);
 		}

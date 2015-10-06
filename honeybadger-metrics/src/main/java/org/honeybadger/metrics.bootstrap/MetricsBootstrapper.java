@@ -9,9 +9,8 @@ import javax.ejb.Startup;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import org.elasticsearch.metrics.ElasticsearchReporter;
-
-import nl.topicus.jgz.honeybadger.bootstrap.cdi.CDIBootstrap;
-import nl.topicus.jgz.honeybadger.configuration.HoneybadgerProperty;
+import org.honeybadger.bootstrap.cdi.CDIBootstrap;
+import org.honeybadger.configuration.HoneybadgerProperty;
 
 /**
  * Producer for {@link MetricRegistry}. Sets some defaults gauges
