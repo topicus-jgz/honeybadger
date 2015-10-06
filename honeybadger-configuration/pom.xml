@@ -9,7 +9,9 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>nl.topicus.jgz</groupId>
     <artifactId>honeybadger-configuration</artifactId>
+    <version>0.1-SNAPSHOT</version>
 
     <dependencies>
 
@@ -35,7 +37,11 @@
             <artifactId>wildfly-swarm-jaxrs-weld</artifactId>
             <version>${version.wildfly-swarm}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-jpa</artifactId>
+            <version>${version.wildfly-swarm}</version>
+        </dependency>
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>wildfly-swarm-ejb</artifactId>

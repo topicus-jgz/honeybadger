@@ -10,12 +10,9 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>nl.topicus.jgz</groupId>
     <artifactId>honeybadger-metrics</artifactId>
     <version>0.1-SNAPSHOT</version>
-
-    <properties>
-        <version.wildfly-swarm>1.0.0.Alpha5-SNAPSHOT</version.wildfly-swarm>
-    </properties>
 
     <dependencies>
         <dependency>
