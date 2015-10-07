@@ -2,7 +2,6 @@ package org.honeybadger.configuration;
 
 import com.netflix.config.PollResult;
 import com.netflix.config.PolledConfigurationSource;
-import com.sun.deploy.net.HttpResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -69,7 +68,7 @@ public class HoneyConfigurationSource implements PolledConfigurationSource {
 		return response.toString();
 	}
 
-	private HttpResponse throwException() {
+	private void throwException() {
 		throw new IllegalStateException("Cannot plug into Honey. Get operation failed! Tried url: " + honeyUrl);
 	}
 }
