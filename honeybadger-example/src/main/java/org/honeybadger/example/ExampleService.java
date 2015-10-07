@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.honeybadger.bootstrap.PreDeploymentBootstrap;
 import org.honeybadger.core.Service;
+import orghoneybadger.swagger.bootstrap.SwaggerBootstrap;
 //import orghoneybadger.swagger.bootstrap.SwaggerBootstrap;
 
 /**
@@ -26,11 +27,11 @@ public class ExampleService extends Service {
 
 	@Override
 	protected List<PreDeploymentBootstrap> bootstraps() {
-		return Lists.newArrayList();
+		return Lists.newArrayList(new SwaggerBootstrap());
 	}
 
 	@Override
 	public void setup() {
-		//registerResource(ExampleResource.class);
+		registerResource(ExampleResource.class);
 	}
 }

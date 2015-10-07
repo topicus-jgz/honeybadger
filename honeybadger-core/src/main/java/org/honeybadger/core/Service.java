@@ -17,6 +17,20 @@ public abstract class Service {
 
 	private Configuration configuration;
 
+	public static void main(String[] args) {
+		try {
+			new Service() {
+
+				@Override
+				public void setup() {
+
+				}
+			};
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	protected Service() throws Exception {
 		this.boostrap();
 	}

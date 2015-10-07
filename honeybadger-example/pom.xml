@@ -18,11 +18,27 @@
             <version>0.1-SNAPSHOT</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>nl.topicus.jgz</groupId>-->
-            <!--<artifactId>honeybadger-swagger</artifactId>-->
-            <!--<version>0.1-SNAPSHOT</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>nl.topicus.jgz</groupId>
+            <artifactId>honeybadger-swagger</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.swarm</groupId>
+                <artifactId>wildfly-swarm-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
