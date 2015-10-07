@@ -4,7 +4,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>nl.topicus.jgz</groupId>
         <artifactId>honeybadger-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
