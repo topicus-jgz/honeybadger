@@ -53,7 +53,7 @@ public class HoneyConfigurationSource implements PolledConfigurationSource {
 			int responseCode = connection.getResponseCode();
 			if (responseCode == 200) {
 				BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-				String responseLine = null;
+				String responseLine;
 
 				while ((responseLine = in.readLine()) != null) {
 					response.append(responseLine);
