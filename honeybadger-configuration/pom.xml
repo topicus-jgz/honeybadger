@@ -9,7 +9,6 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>nl.topicus.jgz</groupId>
     <artifactId>honeybadger-configuration</artifactId>
     <version>0.1-SNAPSHOT</version>
 
@@ -21,11 +20,6 @@
             <version>0.6.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-client</artifactId>
-            <version>3.0.12.Final</version>
-        </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jackson-provider</artifactId>
