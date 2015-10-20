@@ -1,12 +1,9 @@
 package org.honeybadger.core;
 
+import org.honeybadger.core.bootstrap.BootstrapBuilder;
 import org.honeybadger.bootstrap.Configuration;
-import org.honeybadger.bootstrap.PreDeploymentBootstrap;
 import org.honeybadger.configuration.ConfigurationBootstrap;
 import org.honeybadger.core.jaxrs.Resource;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Base class for any microservice.
@@ -36,7 +33,7 @@ public abstract class Service {
         }
 
         //bootstraps that do not rely on CDI or the container being started
-        bootstraps().forEach(bootstrap -> bootstrap.bootstrap(configuration));
+        bootstrapBuilder().bootstrap(configuration);
 
         //Doing the org.honeybadger.honeybadger.bootstrap on the container
         configuration.getContainer().start();
@@ -49,8 +46,8 @@ public abstract class Service {
         configuration.deployJaxRS();
     }
 
-    protected List<PreDeploymentBootstrap> bootstraps() {
-        return new ArrayList<>();
+    public BootstrapBuilder bootstrapBuilder() {
+        return new BootstrapBuilder();
     }
 
     public abstract void setup();
@@ -67,7 +64,7 @@ public abstract class Service {
 
     protected void addPackage(String pack) {
         assertBootstrapped();
-        configuration.getJaxrsArchive().addPackage(pack);
+        configuration.getJaxrsArchive().addPackages(true, pack);
     }
 
     private void assertBootstrapped() {
