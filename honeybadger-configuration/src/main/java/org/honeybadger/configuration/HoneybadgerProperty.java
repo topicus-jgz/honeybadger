@@ -7,16 +7,27 @@ import com.netflix.config.DynamicPropertyFactory;
  */
 public class HoneybadgerProperty {
 
-	private static final String DEFAULT_EMPTY_VALUE = "";
+    private static final String DEFAULT_EMPTY_VALUE = "";
 
-	public static String get(String property) {
+    public static String getStringProperty(String property) {
 
-		String determinedProperty = DynamicPropertyFactory.getInstance().getStringProperty(property, DEFAULT_EMPTY_VALUE).getValue();
+        String determinedProperty = DynamicPropertyFactory.getInstance().getStringProperty(property, DEFAULT_EMPTY_VALUE).getValue();
 
-		if (determinedProperty.equals(DEFAULT_EMPTY_VALUE)) {
-			throw new IllegalStateException("Could not locate property: " + property);
-		}
+        if (determinedProperty.equals(DEFAULT_EMPTY_VALUE)) {
+            throw new IllegalStateException("Could not locate property: " + property);
+        }
 
-		return determinedProperty;
-	}
+        return determinedProperty;
+    }
+
+    public static Integer getIntegerProperty(String property) {
+
+        Integer determinedProperty = DynamicPropertyFactory.getInstance().getIntProperty(property, 0).getValue();
+
+        if (determinedProperty.equals(DEFAULT_EMPTY_VALUE)) {
+            throw new IllegalStateException("Could not locate property: " + property);
+        }
+
+        return determinedProperty;
+    }
 }
