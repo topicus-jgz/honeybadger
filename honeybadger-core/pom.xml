@@ -6,7 +6,7 @@
 
 
     <parent>
-        <groupId>nl.topicus.jgz</groupId>
+        <groupId>org.honeybadger</groupId>
         <artifactId>honeybadger-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
@@ -18,7 +18,7 @@
 
         <!-- honeybadger based dependencies -->
         <dependency>
-            <groupId>nl.topicus.jgz</groupId>
+            <groupId>org.honeybadger</groupId>
             <artifactId>honeybadger-configuration</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>
@@ -51,6 +51,7 @@
             <plugin>
                 <groupId>org.wildfly.swarm</groupId>
                 <artifactId>wildfly-swarm-plugin</artifactId>
+                <version>${version.wildfly-swarm}</version>
                 <executions>
                     <execution>
                         <goals>

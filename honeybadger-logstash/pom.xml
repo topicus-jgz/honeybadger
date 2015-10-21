@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>nl.topicus.jgz</groupId>
+        <groupId>org.honeybadger</groupId>
         <artifactId>honeybadger-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>nl.topicus.jgz</groupId>
+            <groupId>org.honeybadger</groupId>
             <artifactId>honeybadger-configuration</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>
