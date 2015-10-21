@@ -16,7 +16,6 @@
         <module>honeybadger-logstash</module>
         <module>honeybadger-configuration</module>
         <module>honeybadger-swagger</module>
-        <module>honeybadger-example</module>
     </modules>
 
     <properties>
