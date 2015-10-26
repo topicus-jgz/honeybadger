@@ -15,6 +15,7 @@
         <module>honeybadger-metrics</module>
         <module>honeybadger-logstash</module>
         <module>honeybadger-configuration</module>
+        <module>honeybadger-swagger</module>
     </modules>
 
     <properties>

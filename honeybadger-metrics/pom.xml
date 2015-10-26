@@ -9,8 +9,7 @@
         <artifactId>honeybadger-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
-
-    <groupId>org.honeybadger</groupId>
+    
     <artifactId>honeybadger-metrics</artifactId>
     <version>0.1-SNAPSHOT</version>
 
